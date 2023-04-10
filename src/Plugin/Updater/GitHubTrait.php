@@ -170,14 +170,18 @@ trait GitHubTrait
             return false;
         }
 
-        // apply Markdown parsing to the release notes?
-        // TODO put a hook here to allow other approaches
-        // $parsedown = require_once(dirname(__DIR__) . '/util/parsedown.php');
-        // foreach ($update->sections as $section => $content) {
-        //     $update->sections[$section] = $parsedown->text($content);
-        // }
+        /**
+         * Filter the content of the update info response.
+         * This is a good opportunity to (for example) apply
+         * markdown-to-html conversion to the release notes.
+         *
+         * @since 1.0.0
+         */
+        $update = apply_filters('dubya/format_release_notes', $update);
+
         return $update;
     }
+
     /**
      * If you need to add a GitHub access token to your requests, you can do so here, using the
      * update_plugins_github.com_headers filter or the update_plugins_github.com_{pluginSlug}_headers
