@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-beta.4](https://github.com/dubyaio/plugin-updater-github/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2023-04-10)
+
+
+### Fixed
+
+* prefix all method calls and properties ([af25fd4](https://github.com/dubyaio/plugin-updater-github/commit/af25fd4a14d115268decd338b965db49031810f3))
+
 ## [1.0.0-beta.3](https://github.com/dubyaio/plugin-updater-github/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2023-04-10)
 
 
