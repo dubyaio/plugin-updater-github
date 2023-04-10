@@ -72,5 +72,5 @@ jobs:
         env:
           # IF RELEASE NEEDS TO TRIGGER ANOTHER ACTION, CREATE A CUSTOM TOKEN
           # SEE https://github.com/semantic-release/github#github-authentication
-          GITHUB_TOKEN: ${{ secrets[format('CUSTOM_GITHUB_TOKEN_{0}', github.actor)] }}
+          GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
         run: npx semantic-release
