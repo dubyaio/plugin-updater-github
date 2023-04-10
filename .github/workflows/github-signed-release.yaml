@@ -51,6 +51,7 @@ jobs:
           npm --global install semantic-release@21 \
             conventional-changelog-conventionalcommits \
             @semantic-release/changelog \
+            @semantic-release/exec \
             @semantic-release/git
 
       # these environment variables are set so that the next step can use them to
@@ -72,5 +73,6 @@ jobs:
         env:
           # IF RELEASE NEEDS TO TRIGGER ANOTHER ACTION, CREATE A CUSTOM TOKEN
           # SEE https://github.com/semantic-release/github#github-authentication
-          GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets[format('CUSTOM_GITHUB_TOKEN_{0}', github.actor)] }}
+          GH_TOKEN: ${{ secrets[format('CUSTOM_GITHUB_TOKEN_{0}', github.actor)] }}
         run: npx semantic-release
