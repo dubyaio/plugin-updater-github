@@ -1,0 +1,30 @@
+{
+  "name": "dubya/plugin-updater-github",
+  "homepage": "https://dubya.io/",
+  "description": "A trait handling an Update URI implentation for GitHub-released plugins.",
+  "type": "library",
+  "keywords": [
+    "wordpress",
+    "plugins",
+    "php",
+    "php traits",
+    "dubya"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Clay Loveless",
+      "homepage": "https://github.com/claylo"
+    }
+  ],
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "preferred-install": "dist"
+  },
+  "require": {
+    "php": ">=7.4.0 || ^8.0 || ^8.1 || ^8.2",
+    "ext-pcre": "*",
+    "ext-json": "*"
+  }
+}
