@@ -52,6 +52,12 @@
       }
     ],
     [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "echo ${nextRelease.version} > .next-version && make build"
+      }
+    ],
+    [
       "@semantic-release/git",
       {
         "assets": [
@@ -59,7 +65,17 @@
         ]
       }
     ],
-    "@semantic-release/github"
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          {
+            "path": "build/plugin-updater-github-*.zip",
+            "label": "Plugin Updater Github ${nextRelease.version} (zip)"
+          }
+        ]
+      }
+    ]
   ],
   "preset": "conventionalcommits",
   "presetConfig": {
