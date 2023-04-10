@@ -101,11 +101,11 @@ trait GitHubTrait
             return $result;
         }
 
-        if (dirname($this->pluginSlug) !== $args->slug) {
+        if (dirname($this->dpuPluginSlug) !== $args->slug) {
             return $result;
         }
 
-        $latest = $this->getLatestRelease();
+        $latest = $this->dpuGetLatestRelease();
 
         if ($latest === false) {
             return $result;
